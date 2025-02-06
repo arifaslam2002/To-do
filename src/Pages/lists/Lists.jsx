@@ -67,7 +67,7 @@ const Todolist = () => {
               <p>{item}</p>
               {/* by this we call the elemts */}
               <Popconfirm
-  title="Do you Complete Your task?"
+  title="Do you Complete this task?"
   okText="Yes"
   cancelText="No"
   onConfirm={() => onDelete(index)}
