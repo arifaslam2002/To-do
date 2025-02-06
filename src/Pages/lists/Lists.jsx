@@ -1,6 +1,6 @@
 import "./lists.css"; //importing the css
 import React, { useState } from "react"; // importing the libary for the state which is from the react
-
+import { Button, Popconfirm } from 'antd';
 const Todolist = () => {
   const [input, setInput] = useState("");
   const [tasks, setTasks] = useState([]);
@@ -66,9 +66,15 @@ const Todolist = () => {
           <div className="task-item">
               <p>{item}</p>
               {/* by this we call the elemts */}
-              <button className="delete-btn" onClick={() => onDelete(index)}>
-                Delete Task
-              </button>
+              <Popconfirm
+  title="Do you Complete Your task?"
+  okText="Yes"
+  cancelText="No"
+  onConfirm={() => onDelete(index)}
+>
+  <Button className="delete-btn">Delete Task</Button>
+</Popconfirm>
+
             </div>
           )))}
         </div>

@@ -143,3 +143,6 @@
     background: linear-gradient(145deg, #e84118, #c23616);
     transform: scale(1.1);
 }
+.ant-popover {
+    z-index: 1000 !important;
+  }
